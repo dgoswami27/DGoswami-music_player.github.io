@@ -1,0 +1,39 @@
+@media screen  and (max-width:920px)
+{
+    .songList{
+        min-width: 70vw;
+        min-height: auto;
+    }
+
+    .songName {
+        font-size: 0.9rem;
+        word-wrap:break-word;
+      }
+
+    .songItem {
+        flex-direction: column;
+        height: auto;
+        padding: 12px;
+      }
+    
+      .songItem img{
+        width: 30px;
+        margin-bottom: 12px;
+      }
+
+      .songListPlay{
+        margin-top: 6px;
+      }
+
+      .bottom{
+        position: sticky;
+      }
+
+      .songInfo{
+        margin-top: -75px;
+      }
+
+      #myProgressBar{
+        margin-top: 42px;
+      }
+}
