@@ -118,3 +118,16 @@ nav ul li{
     opacity: 0;
     transition: opacity 0.4s ease-in;
 }
+
+footer{
+    background-color:aliceblue;
+}
+
+footer h2{
+    padding: 23px 0 0;
+}
+ 
+.follow i{
+    cursor: pointer;
+    padding: 0 12px 12px;
+}
