@@ -60,6 +60,7 @@ nav ul li{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0 0 10px;
 }
 
 .icons{
@@ -120,7 +121,8 @@ nav ul li{
 }
 
 footer{
-    background-color:aliceblue;
+    background-color:black;
+    color: white;
 }
 
 footer h2{
