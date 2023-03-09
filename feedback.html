@@ -77,6 +77,12 @@
       border-radius: 5px;
     }
 
+    .txtarea{
+      border-radius: 5px; 
+      width: 52vw;
+      height: 15vh;
+    }
+
     td {
       padding: 10px 20px 0px 0px;
     }
@@ -95,7 +101,28 @@
       padding: 0 12px 12px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 720px) {
+
+      h1{
+        padding: 12px;
+        font-size: 8vw;
+      }
+      .container p{
+        font-size: 4vw;
+      }
+      .container{
+        margin: 0;
+        padding: 0;
+        height: 75vh;
+        width: 100vw;
+      }
+
+      .txtarea{
+        width: 75vw;
+      }
+      .txt{
+        width: 75vw;
+      }
       td{
         display: flex;
         flex-direction: column;
@@ -132,7 +159,7 @@
           <tr>
             <td colspan="2">
               <label for="feedback">Feedback / Suggestion</label><br>
-              <textarea name="Feedback" id="feedback"  placeholder="Enter Message Here" style="border-radius: 5px; width: 52vw; height: 15vh;"></textarea>
+              <textarea name="Feedback" id="feedback" class="txtarea" placeholder="Enter Message Here"></textarea>
             </td>
           </tr>
           <tr>
