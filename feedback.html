@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGoswami - Give Valuable Feedback</title>
+  <link rel="icon" href="favicon.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Varela+Round&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: blueviolet;
+    }
+
+    nav {
+      font-family: 'Merriweather', serif;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      height: 65px;
+      background-color: black;
+      color: white;
+    }
+
+    nav ul li {
+      padding: 0 12px;
+      cursor: pointer;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .brand img {
+      width: 65px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      font-weight: bolder;
+      font-size: 1.3rem;
+    }
+
+    .container {
+      background-color: aqua;
+      font-family: 'Lora', serif;
+      padding: 64px;
+      margin: 4vh 10vw 4vh 10vw;
+    }
+
+    .container p,
+    form {
+      padding: 12px;
+      font-size: 2vw;
+    }
+
+    h1 {
+      font-size: 5vw;
+    }
+
+    .txt {
+      width: 25vw;
+      height: 5vh;
+      border-radius: 5px;
+    }
+
+    td {
+      padding: 10px 20px 0px 0px;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+    }
+
+    footer h2 {
+      padding: 23px 0 0;
+    }
+
+    .follow i {
+      cursor: pointer;
+      padding: 0 12px 12px;
+    }
+
+    @media (max-width: 800px) {
+      td{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li class="brand"><img src="logo.jpg" alt="music player">DGoswami</li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <center>
+      <h1>Feedback or Suggestion</h1>
+      <p>Thank You For Visiting My Website and give your valuable time. You can write your experience here.</p>
+      <table>
+        <form action="form" method="post" name="google-sheet">
+          <tr>
+            <td>
+              <label for="name">Name</label><br>
+              <input type="text" required placeholder="Roman Reigns" class="txt" name="Name">
+            </td>
+            <td>
+              <label for="email">Email</label><br>
+              <input type="email" placeholder="xyz123@gmail.com" class="txt" name="Email"> 
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <label for="feedback">Feedback / Suggestion</label><br>
+              <textarea name="Feedback" id="feedback"  placeholder="Enter Message Here" style="border-radius: 5px; width: 52vw; height: 15vh;"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><button type="submit" style="background-color:aliceblue; border-radius: 5px; width: 60px; " name="submit">Submit</button></td>
+          </tr>
+        </form>
+      </table>
+    </center>
+  </div>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx1HQ8ZidyWeXq2zxiQSV9pRruMIkTEh9yNsOZWlIKRfqQsCjbbp70LGgVOCPFUF47SdQ/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+
+<footer>
+  <script src="https://kit.fontawesome.com/e9944dd133.js" crossorigin="anonymous"></script>
+  <center>
+    <h2>Contact Me</h2><br>
+    <div class="follow">
+      <a href="https://www.instagram.com/dushyant_goswami_27/"><i class="fa-brands fa-2x fa-instagram"></i></a>
+      <a href="https://wa.me/6354011265"><i class="fa-brands fa-2x fa-whatsapp"></i></a>
+      <a href="https://twitter.com/D_L_Goswami"><i class="fa-brands fa-2x fa-twitter"></i></a>
+      <a href="mailto:dushyantpuri2711@gmail.com"><i class="fa-solid fa-2x fa-envelope"></i></a>
+    </div>
+    Copyright &copy; All Rights are Reserved <br><br>
+  </center>
+</footer>
+
+</html>

@@ -9,17 +9,17 @@ let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Love_Me_Like_You_Do", fieldPath: "Music/1.m4a", coverPath: "Cover/Cover1.jpg"},
-    {songName: "Alan_Walker_-_Faded", fieldPath: "Music/2.m4a", coverPath: "Cover/Cover2.jpg"},
-    {songName: "See_You_Again_ft._Furious 7 Soundtrack", fieldPath: "Music/3.m4a", coverPath: "Cover/Cover3.jpg"},
-    {songName: "Alan_Walker, Sabrina_Carpenter & Farruko_On_My_Way", fieldPath: "Music/4.m4a", coverPath: "Cover/Cover4.jpg"},
-    {songName: "Alan_Walker_&_Ava_Max_-_Alone_Pt_II", fieldPath: "Music/5.m4a", coverPath: "Cover/Cover5.jpg"},
-    {songName: "Alan_Walker_-_Alone", fieldPath: "Music/6.m4a", coverPath: "Cover/Cover6.jpg"},
-    {songName: "Billie_Eilish,_Khalid_-_lovely", fieldPath: "Music/7.m4a", coverPath: "Cover/Cover7.jpg"},
-    {songName: "Coldplay_-_Hymn_For_The_Weekend", fieldPath: "Music/8.m4a", coverPath: "Cover/Cover8.jpg"},
-    {songName: "Enemy_(from_the_series Arcane_League_of_Legends)", fieldPath: "Music/9.m4a", coverPath: "Cover/Cover9.jpg"},
-    {songName: "Let_Me_Love_You", fieldPath: "Music/10.m4a", coverPath: "Cover/Cover10.jpg"},
-    {songName: "One_Direction_-_Night_Changes", fieldPath: "Music/11.m4a", coverPath: "Cover/Cover11.jpg"}
+    {songName: "Love Me Like You Do", fieldPath: "Music/1.m4a", coverPath: "Cover/Cover1.jpg"},
+    {songName: "Alan Walker - Faded", fieldPath: "Music/2.m4a", coverPath: "Cover/Cover2.jpg"},
+    {songName: "See You Again ft.Furious 7 Soundtrack", fieldPath: "Music/3.m4a", coverPath: "Cover/Cover3.jpg"},
+    {songName: "Alan Walker, Sabrina Carpenter & Farruko On My Way", fieldPath: "Music/4.m4a", coverPath: "Cover/Cover4.jpg"},
+    {songName: "Alan Walker & Ava Max - Alone Pt II", fieldPath: "Music/5.m4a", coverPath: "Cover/Cover5.jpg"},
+    {songName: "Alan Walker - Alone", fieldPath: "Music/6.m4a", coverPath: "Cover/Cover6.jpg"},
+    {songName: "Billie Eilish, Khalid - lovely", fieldPath: "Music/7.m4a", coverPath: "Cover/Cover7.jpg"},
+    {songName: "Coldplay - Hymn For The Weekend", fieldPath: "Music/8.m4a", coverPath: "Cover/Cover8.jpg"},
+    {songName: "Enemy (from the series Arcane League of Legends)", fieldPath: "Music/9.m4a", coverPath: "Cover/Cover9.jpg"},
+    {songName: "Let Me Love You", fieldPath: "Music/10.m4a", coverPath: "Cover/Cover10.jpg"},
+    {songName: "One Direction - Night Changes", fieldPath: "Music/11.m4a", coverPath: "Cover/Cover11.jpg"}
 ]
 
 songItems.forEach((element,i)=>{
@@ -83,21 +83,6 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
             masterPlay.classList.remove('fa-circle-play');
             masterPlay.classList.add('fa-circle-pause');
         }
-        // else if(audioElement.play && songIndex != parseInt(e.target.id)){
-        //     makeAllPlays();
-        //     songIndex = parseInt(e.target.id);
-        //     e.target.classList.remove('fa-circle-play');
-        //     e.target.classList.add('fa-circle-pause');
-
-        //     audioElement.src = `Music/${songIndex+1}.m4a`;
-        //     audioElement.currentTime = 0;
-        //     audioElement.play();
-        //     masterSongName.innerText = songs[songIndex].songName;
-
-        //     gif.style.opacity = 1;
-        //     masterPlay.classList.remove('fa-circle-play');
-        //     masterPlay.classList.add('fa-circle-pause');
-        // }
         else if((audioElement.paused || audioElement.currentTime <= 0) || (audioElement.play && songIndex != parseInt(e.target.id))){
             makeAllPlays();
             songIndex = parseInt(e.target.id);
