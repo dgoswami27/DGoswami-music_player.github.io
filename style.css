@@ -26,6 +26,12 @@ nav ul li{
     padding: 0 12px;
     cursor: pointer;
 }
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
 .brand img{
     width: 65px;
 }
@@ -49,6 +55,30 @@ nav ul li{
     padding: 34px;
     background-image: url('bg.jpg');
 }
+
+.top{
+    /* width: 180%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category{
+    position: absolute;
+    right: 230px;
+}
+
+.category a{
+    font-size: 1.0rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.english{
+    padding: 0px 10px;
+}
+
 
 .bottom{
     position: sticky;
