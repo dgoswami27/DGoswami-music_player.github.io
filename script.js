@@ -19,7 +19,8 @@ let songs = [
     {songName: "Coldplay - Hymn For The Weekend", fieldPath: "Music/8.m4a", coverPath: "Cover/Cover8.jpg"},
     {songName: "Enemy (from the series Arcane League of Legends)", fieldPath: "Music/9.m4a", coverPath: "Cover/Cover9.jpg"},
     {songName: "Let Me Love You", fieldPath: "Music/10.m4a", coverPath: "Cover/Cover10.jpg"},
-    {songName: "One Direction - Night Changes", fieldPath: "Music/11.m4a", coverPath: "Cover/Cover11.jpg"}
+    {songName: "One Direction - Night Changes", fieldPath: "Music/11.m4a", coverPath: "Cover/Cover11.jpg"},
+    {songName: "Perfect", fieldPath: "Music/12.mp3", coverPath: "Cover/Cover11.jpg"}
 ]
 
 songItems.forEach((element,i)=>{
